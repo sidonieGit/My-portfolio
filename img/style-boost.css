@@ -1,0 +1,49 @@
+body {
+  /* background: url("/djuissi2.jpg") rgba(0, 0, 0, 0.3); */
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+  }
+
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+  }
+  .sido-pp > div > h1 {
+    font-size: 1em !important;
+  }
+  .sido-pp {
+    width: 10%;
+    height: 10px;
+    margin: auto;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Optional: Adjust the border color */
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
