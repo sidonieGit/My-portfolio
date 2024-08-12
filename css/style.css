@@ -9,13 +9,28 @@ body {
 nav a:hover {
   text-decoration: underline;
 }
-
-.nav .link-underline-hover:hover {
-  text-decoration: dashed !important;
+.nav-link.active {
+  background-color: var(--bs-primary);
+  opacity: 0.7;
+  color: white;
+  border-radius: 5px; /* Facultatif : pour arrondir les bords */
 }
 
 .heading-sec__main {
   letter-spacing: 3px;
+}
+
+/* Initial State */
+.section-title {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active State */
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* HTML: <div class="loader"></div> */
@@ -34,6 +49,25 @@ nav a:hover {
   mask-composite: exclude;
   animation: l1 1.5s infinite;
 }
+
+/* Animation Keyframes */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the buttons */
+.blinking-button {
+  animation: blink 1s infinite;
+}
+
 @keyframes l1 {
   0% {
     -webkit-mask-size: 0 0, 0 0, 0 0, auto;
@@ -89,8 +123,4 @@ nav a:hover {
   html {
     font-size: 56%;
   }
-  /* .logo {
-    width: 40px;
-    height: 35px;
-  } */
 }
