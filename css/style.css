@@ -13,7 +13,7 @@ nav a:hover {
   background-color: var(--bs-primary);
   opacity: 0.7;
   color: white;
-  border-radius: 5px; /* Facultatif : pour arrondir les bords */
+  border-radius: 5px; /* optinal */
 }
 
 .heading-sec__main {
@@ -119,8 +119,8 @@ nav a:hover {
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+/* @media only screen and (max-width: 56.25em) {
   html {
-    font-size: 56%;
+    font-size: 80%;
   }
-}
+} */
